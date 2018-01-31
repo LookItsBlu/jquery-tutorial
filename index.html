@@ -4,26 +4,46 @@
     <meta charset="UTF-8">
     <title>Untitled Document</title>
 	<meta name="Author" content=""/>
-	<link rel="stylesheet" type="text/css" href="style.css">
 
-    <script type='text/javascript' src='script/jquery-3.2.1.min.js'></script>
+    <!-- Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+
+    <!-- Jquery -->
+    <script type='text/javascript' src='scripts/jquery-3.2.1.min.js'></script>
+
+    <!-- Bootstrap -->
+	<link rel='stylesheet' type='text/css' href='styles/vendor/bootstrap.min.css'>
+	<link rel='stylesheet' type='text/css' href='styles/vendor/bootstrap-theme.min.css'>
+
+    <!-- Style -->
+    <link rel="stylesheet" type="text/css" href="styles/style.css">
 </head>
 <body>
-    <form class='account'>
-        <label for='nom'>Nom</label>
-        <input class='nom' name='nom' type='text'>
+    <div class='container'>
+        <div class='row'>
+            <h1 class='col-md-4'>Création de compte</h1>
+        </div>
+        <div class='row'>
+            <form class='form-group col-md-4 account'>
+                <label for='nom'>Nom</label>
+                <input class='form-control nom' id='nom' type='text'>
 
-        <label for='prenom'>Prenom</label>
-        <input class='prenom' name='prenom' type='text'>
+                <label for='prenom'>Prenom</label>
+                <input class='form-control prenom' id='prenom' type='text'>
 
-        <label for='mail'>Prenom</label>
-        <input class='mail' name='mail' type='mail'>
+                <label for='mail'>Mail</label>
+                <input class='form-control mail' id='mail' type='mail'>
 
-        <button type='submit'>Envoyer</button>
-    </form>
+                <button class='btn btn-default' type='submit'>Envoyer</button>
+            </form>
+        </div>
+        <div class='row'>
+            <div class='alert-danger col-md-4 error'>
+                <strong>Erreur!</strong> Un des champs est vide!
+            </div>
+        </div>
+    </div>
 
-    <div class='error'>ERREUR</div>
-
-    <script type='text/javascript' src='script/script.js'></script>
+    <script type='text/javascript' src='scripts/script.js'></script>
 </body>
 </html>
